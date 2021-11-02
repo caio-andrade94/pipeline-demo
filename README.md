@@ -1,1 +1,1 @@
-# pipeline-demo
+# pipeline de demonstração do jenkinsfile
