@@ -1,0 +1,28 @@
+pipeline {
+    agent any 
+    
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building...'                
+                }            
+        }
+        stage('Test') {
+            steps {
+                echo 'Testando...'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'                
+            }
+        }
+    }
+    
+    post {
+        always { echo "Eu sempre vou ser executado!"}
+        success { echo "Somente serei executado quando finalizar com sucesso!"}
+        failure { echo "Somentei serei executado quando finalizar com erro!"}
+    }
+    
+}
